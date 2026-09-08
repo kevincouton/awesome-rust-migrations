@@ -115,6 +115,8 @@ Practical write-ups on how teams actually run these migrations.
 - [Rust Is Eating JavaScript](https://leerob.com/rust) - Lee Robinson's evolving survey of Rust replacing JavaScript tooling, updated in 2026 with Turbopack, Rolldown, Oxc, Biome, Rspack, Tailwind CSS v4, Deno, uv, and Ruff.
 - [Using GPT-4 to Assist in C to Rust Translation](https://www.galois.com/articles/using-gpt-4-to-assist-in-c-to-rust-translation) - Galois experiment using GPT-4 for behavior-preserving refactoring in C2Rust output.
 - [Function Argument Nullability Using an LLM](https://www.galois.com/articles/function-argument-nullability-using-an-llm) - Galois article on augmenting C2Rust migration analysis with an LLM.
+- [Canonical Funded a PhD to Translate C to Rust. Ask Why.](https://www.beri.net/article/ai-c-to-rust-translation-residual-unsafe-code-canonical-phd) - Critical analysis of what AI C-to-Rust translation leaves behind, the residual-unsafe-code problem, and how Google's data argues for writing new safe code rather than translating the old corpus.
+- [Ghosts in the Silicon: Fixing Memory Safety and Surviving Hardware Decay](https://josephhall.org/blog/wallach-mem-safety-sw-independence/) - Discussion with computer scientist Dan Wallach covering DARPA TRACTOR, the correctness-safety-idiomaticity trilemma of automated translation, and why manual rewrites cannot scale to the legacy C corpus.
 
 ## Adjacent Lists
 
