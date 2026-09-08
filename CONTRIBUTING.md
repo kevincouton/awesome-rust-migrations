@@ -4,7 +4,7 @@ Thanks for helping make this list useful. Open a pull request with the entry you
 
 ## What Belongs Here
 
-Good additions should be about rewriting, migrating, porting, or reimplementing an existing codebase in Rust.
+Good additions are about rewriting, migrating, porting, or reimplementing an existing codebase in Rust — or about the memory-safety case, tooling, and research that make those migrations possible.
 
 Scale and ambition matter. The list focuses on substantial rewrites of established codebases, runtimes, compilers, databases, browsers, package managers, and similarly important infrastructure. An entry should replace a meaningful part of an incumbent system or demonstrate unusual migration scope. A useful but small wrapper, plugin, accelerator, or greenfield alternative is not enough by itself.
 
@@ -17,6 +17,8 @@ Strong entries usually have at least one of:
 - source and target code links
 - detailed toolchain description
 - discussion of unsafe code, FFI, or semantic gaps
+
+Evidence-based entries about the migration movement itself — vulnerability-density data, memory-safe-roadmap policy, interop tooling, and translation research — belong in the Evidence, Tools and Interop, and Research sections.
 
 ## What Does Not Belong
 
