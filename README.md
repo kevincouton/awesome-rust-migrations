@@ -4,8 +4,6 @@
 
 Rewriting C, C++, and other legacy code in Rust is now a serious, funded, engineering discipline: Google is rewriting dependencies with AI assistance, CISA and the NSA tell vendors to publish memory-safe roadmaps, and DARPA is paying to translate all of C. This list tracks the evidence, the rewrites, the tools, and the research.
 
-Originally based on malisper's Awesome AI Rust Rewrites (CC0), expanded into a broader memory-safety migration hub.
-
 ## Contents
 
 - [The Evidence](#the-evidence)
@@ -133,4 +131,4 @@ Good entries should show at least one serious validation signal: test results, c
 
 Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-This work is [CC0](https://creativecommons.org/publicdomain/zero/1.0/); the LICENSE file carries the full waiver. It was originally based on malisper's Awesome AI Rust Rewrites, also CC0.
+This list started as an expansion of malisper's Awesome AI Rust Rewrites (CC0), which is linked in Adjacent Lists above.
