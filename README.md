@@ -39,7 +39,7 @@ Projects pushing the limits of AI-assisted rewrites into Rust, where behavior co
 - [Ladybird's Rust adoption](https://ladybird.org/posts/adopting-rust/) - Browser project adopting Rust with AI assistance, starting with LibJS because it is relatively isolated and has extensive test coverage.
 - [pacquet](https://github.com/pnpm/pacquet) - Official pnpm rewrite in Rust, porting the pnpm CLI from TypeScript to Rust while matching pnpm behavior, flags, defaults, error codes, file formats, and directory layout.
 - [pgrust](https://pgrust.com/) - PostgreSQL rewrite in Rust using AI-assisted engineering, with PostgreSQL behavior and compatibility tests as the bar.
-- [tsz](https://github.com/mohsen1/tsz) - AI-assisted Rust implementation of a TypeScript checker targeting drop-in `tsc` compatibility, with conformance progress reported against the official TypeScript test suite.
+- [tsz](https://github.com/tsz-org/tsz) - AI-assisted Rust implementation of a TypeScript checker targeting drop-in `tsc` compatibility, with conformance progress reported against the official TypeScript test suite.
 
 ## Automated Translation and C2Rust Case Studies
 
@@ -49,7 +49,7 @@ These are mostly not AI-assisted, but they are the prior art for automated trans
 - [libyaml-safer](https://github.com/simonask/libyaml-safer) - Fully safe Rust fork of `unsafe-libyaml`, originally translated from libyaml with C2Rust.
 - [rav1d](https://github.com/memorysafety/rav1d) - Fully safe Rust port of the `dav1d` AV1 decoder, created with C2Rust and then refactored toward safer, more idiomatic Rust.
 - [rexpat](https://github.com/immunant/rexpat) - Rust port of Expat used as a C2Rust case study.
-- [sapp-kms](https://docs.rs/sapp-kms) - C2Rust-derived port of sokol's KMS backend, cleaned up but still unsafe.
+- [sapp-kms](https://docs.rs/sapp-kms/latest/sapp_kms) - C2Rust-derived port of sokol's KMS backend, cleaned up but still unsafe.
 - [spiro.rlib](https://github.com/MFEK/spiro.rlib) - Fully safe C2Rust-derived port of the `spiro` spline interpolation library.
 - [tsuki](https://github.com/ultimaweapon/tsuki) - Fully safe C2Rust-derived port of the Lua interpreter.
 - [unsafe-libyaml](https://github.com/dtolnay/unsafe-libyaml) - Mostly direct C2Rust-derived port of libyaml, kept fully unsafe with minor cleanup.
