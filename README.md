@@ -26,6 +26,7 @@ The data and policy behind the migration movement. Memory safety bugs are the ma
 - [The Case for Memory Safe Roadmaps](https://www.cisa.gov/resources-tools/resources/case-memory-safe-roadmaps) - Joint guidance from CISA, NSA, FBI, and international partners urging every technology manufacturer to publish a memory-safe roadmap and describe how memory-unsafe dependencies will be eliminated.
 - [Software Memory Safety Is Cybersecurity](https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-352a) - CISA advisory AA23-352A on memory safety as a national cybersecurity concern, with language-by-language migration recommendations.
 - [Memory Safe Languages: Reducing Vulnerabilities in Modern Software Development](https://www.cisa.gov/resources-tools/resources/memory-safe-languages-reducing-vulnerabilities-modern-software-development) - Joint NSA and CISA Cybersecurity Information Sheet (2024) on adopting memory-safe languages, expanding on NSA's original Software Memory Safety guidance and the White House ONCD "Back to the Building Blocks" report.
+- [Prossimo: Memory Safety](https://www.memorysafety.org/) - Internet Security Research Group initiative funding memory-safe rewrites and foundations, including `rav1d`, `rustls`, `zlib-rs`, and Rust support in the Linux kernel.
 - [DARPA TRACTOR](https://www.darpa.mil/research/programs/translating-all-c-to-rust) - DARPA program to automate translation of legacy C code to Rust using software analysis and machine learning.
 - [TRACTOR Benchmarks](https://www.ll.mit.edu/r-d/projects/translating-all-c-rust-tractor-benchmarks) - MIT Lincoln Laboratory benchmarks and evaluation work for DARPA's C-to-Rust translation program.
 
@@ -70,6 +71,7 @@ Not necessarily AI-assisted — these show large ecosystems replacing existing d
 - [Rolldown](https://rolldown.rs/) - Rust Rollup-compatible bundler used by Vite to replace its previous esbuild/Rollup split.
 - [Rspack](https://rspack.rs/blog/announcing-1-0) - Rust Webpack-compatible bundler designed for progressive migration from Webpack.
 - [Ruff](https://github.com/astral-sh/ruff) - Rust Python linter and formatter that replaces or consolidates tools such as Flake8, isort, and Black.
+- [rustls](https://github.com/rustls/rustls) - Memory-safe TLS library in Rust, Prossimo-funded and available as an officially supported TLS backend in curl, giving the incumbent C TLS ecosystem a production Rust alternative.
 - [Rustwright](https://github.com/Skyvern-AI/rustwright) - Alpha Rust reimplementation of Playwright's browser-control engine under Playwright-shaped Python and Node APIs; reports 515 shared parity cases and 1,046 Docker-gate tests, plus local diagnostic speed and client-memory gains, while explicitly saying full behavioral parity is not yet proven.
 - [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) - New high-performance Tailwind engine using Rust-powered pieces and Lightning CSS, with substantially faster full and incremental builds.
 - [Turbopack](https://nextjs.org/blog/next-13) - Vercel's Rust-based successor to Webpack, introduced through Next.js.
