@@ -104,6 +104,8 @@ Academic work on C-to-Rust translation, from LLM-assisted pipelines to program-a
 - [SACTOR](https://arxiv.org/abs/2503.12511) - LLM-driven multi-step C-to-Rust translation using static analysis.
 - [RustMap](https://arxiv.org/abs/2503.17741) - Project-scale C-to-Rust migration using program analysis, LLMs, dependency guidance, and test feedback.
 - [LLM4C2Rust](https://arxiv.org/abs/2604.15485) - Retrieval-augmented C/C++ to Rust transpilation framework focused on memory safety.
+- [Scylla](https://arxiv.org/abs/2412.15042) - Formalized translation of an applicative subset of C to safe Rust, targeting memory safety by construction rather than after-the-fact cleanup.
+- [CNnotator](https://arxiv.org/abs/2606.21822) - LLM-guided synthesis of CN memory-safety annotations for C code, cutting the manual annotation effort needed to verify legacy C during migration.
 
 ## Guides, Articles, and Talks
 
