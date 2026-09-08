@@ -1,0 +1,4 @@
+# Link is live and verified (200 from multiple vantage points, indexed by Google),
+# but blog.jetbrains.com consistently returns 504 to GitHub Actions runners.
+# Re-check periodically and remove this exclusion if their CDN behavior changes.
+https://blog.jetbrains.com/rust/2026/07/27/cpp-to-rust-migration/
