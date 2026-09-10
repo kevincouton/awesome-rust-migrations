@@ -92,6 +92,7 @@ Translators, migration platforms, and the FFI/interop machinery that makes incre
 - [bindgen](https://github.com/rust-lang/rust-bindgen) - Generates Rust FFI bindings from C and C++ headers, the first tool most migrations touch.
 - [uniffi](https://github.com/mozilla/uniffi-rs) - Mozilla's toolkit for generating foreign-language bindings from Rust, used to ship Rust cores behind Kotlin, Swift, and Python APIs.
 - [corrosion](https://github.com/corrosion-rs/corrosion) - CMake integration for Cargo, for adding Rust targets to existing C and C++ builds.
+- [Rust/C++ Interop Initiative](https://github.com/rustfoundation/interop-initiative) - Rust Foundation initiative mapping and closing Rust/C++ interoperability gaps, the practical prerequisite for incremental C++ to Rust migration in large codebases.
 
 ## Research
 
@@ -107,6 +108,7 @@ Academic work on C-to-Rust translation, from LLM-assisted pipelines to program-a
 - [LLM4C2Rust](https://arxiv.org/abs/2604.15485) - Retrieval-augmented C/C++ to Rust transpilation framework focused on memory safety.
 - [Scylla](https://arxiv.org/abs/2412.15042) - Formalized translation of an applicative subset of C to safe Rust, targeting memory safety by construction rather than after-the-fact cleanup.
 - [CNnotator](https://arxiv.org/abs/2606.21822) - LLM-guided synthesis of CN memory-safety annotations for C code, cutting the manual annotation effort needed to verify legacy C during migration.
+- [MISRust](https://arxiv.org/abs/2605.23490) - Mapping of MISRA-C++ safety-critical coding guidelines to Rust, supporting qualification arguments for Rust in safety-critical migrations.
 
 ## Guides, Articles, and Talks
 
