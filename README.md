@@ -136,7 +136,7 @@ Practical write-ups on how teams actually run these migrations.
 A migration is not finished when the code compiles — the next question is which crates to build on. These are curated, opinionated answers from people who have spent serious time in the ecosystem.
 
 - [blessed.rs](https://blessed.rs/crates) - Community-curated guide to the crates most often reached for per task, organized by domain; the standard answer to "which crate should I use".
-- [stdx](https://github.com/rust-stdx/stdx) - kerkour's extended-standard-library project: a curated, supply-chain-conscious set of crates designed to work from 2 KiB embedded targets up to large servers.
+- [stdx](https://github.com/rust-stdx/stdx) - Kerkour's extended-standard-library project: a curated, supply-chain-conscious set of crates designed to work from 2 KiB embedded targets up to large servers.
 - [Lessons learned building stdx](https://kerkour.com/lessons-learned-building-stdx) - The design rationale behind stdx: why an extended standard library, heap-allocation discipline, and runtime-agnostic APIs.
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Practical recipes for common tasks using the best crate for each job, from the Rust Nursery.
 
