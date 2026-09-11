@@ -13,6 +13,7 @@ Rewriting C, C++, and other legacy code in Rust is now a serious, funded, engine
 - [Tools and Interop](#tools-and-interop)
 - [Research](#research)
 - [Guides, Articles, and Talks](#guides-articles-and-talks)
+- [Choosing Crates](#choosing-crates)
 - [Adjacent Lists](#adjacent-lists)
 
 ## The Evidence
@@ -129,6 +130,15 @@ Practical write-ups on how teams actually run these migrations.
 - [Canonical Funded a PhD to Translate C to Rust. Ask Why.](https://www.beri.net/article/ai-c-to-rust-translation-residual-unsafe-code-canonical-phd) - Critical analysis of what AI C-to-Rust translation leaves behind, the residual-unsafe-code problem, and how Google's data argues for writing new safe code rather than translating the old corpus.
 - [Ghosts in the Silicon: Fixing Memory Safety and Surviving Hardware Decay](https://josephhall.org/blog/wallach-mem-safety-sw-independence/) - Discussion with computer scientist Dan Wallach covering DARPA TRACTOR, the correctness-safety-idiomaticity trilemma of automated translation, and why manual rewrites cannot scale to the legacy C corpus.
 - [Cross-platform Rust: how WhatsApp, Signal and more ship Rust to billions of devices](https://kerkour.com/rust-cross-platform-apps) - Analysis of the two production architectures for shared Rust cores (whole-core vs targeted libraries), UniFFI versus raw FFI bridging, and WhatsApp's C++ to Rust media library migration.
+
+## Choosing Crates
+
+A migration is not finished when the code compiles — the next question is which crates to build on. These are curated, opinionated answers from people who have spent serious time in the ecosystem.
+
+- [blessed.rs](https://blessed.rs/crates) - Community-curated guide to the crates most often reached for per task, organized by domain; the standard answer to "which crate should I use".
+- [stdx](https://github.com/rust-stdx/stdx) - kerkour's extended-standard-library project: a curated, supply-chain-conscious set of crates designed to work from 2 KiB embedded targets up to large servers.
+- [Lessons learned building stdx](https://kerkour.com/lessons-learned-building-stdx) - The design rationale behind stdx: why an extended standard library, heap-allocation discipline, and runtime-agnostic APIs.
+- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Practical recipes for common tasks using the best crate for each job, from the Rust Nursery.
 
 ## Adjacent Lists
 
