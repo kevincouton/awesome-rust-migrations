@@ -78,6 +78,8 @@ Not necessarily AI-assisted — these show large ecosystems replacing existing d
 - [Turbopack](https://nextjs.org/blog/next-13) - Vercel's Rust-based successor to Webpack, introduced through Next.js.
 - [Turso](https://github.com/tursodatabase/turso) - Rust rewrite of SQLite evolving into a pluggable database core; its new [PostgreSQL frontend](https://turso.tech/blog/a-new-modern-version-of-postgres-in-rust) compiles PostgreSQL syntax and types to Turso bytecode, targets common-application compatibility rather than 100% PostgreSQL parity, and documents simulation, oracle, fuzz, and formal-method testing.
 - [uv](https://github.com/astral-sh/uv) - Rust Python package and project manager designed as a fast replacement for tools such as `pip`, `pip-tools`, `pipx`, `poetry`, and `virtualenv`.
+- [WhatsApp wamedia rewrite](https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/) - Meta's writeup of rewriting WhatsApp's media validation library from 160,000 lines of C++ to 90,000 lines of Rust, validated with differential fuzzing and a parallel rollout with rollback, with performance and memory improvements.
+- [libsignal](https://github.com/signalapp/libsignal) - Signal's Rust cryptography and protocol library, migrated from libsignal-protocol-c and shipped to billions of devices behind FFI bridges to Swift, Java, and TypeScript.
 
 ## Tools and Interop
 
@@ -93,6 +95,8 @@ Translators, migration platforms, and the FFI/interop machinery that makes incre
 - [uniffi](https://github.com/mozilla/uniffi-rs) - Mozilla's toolkit for generating foreign-language bindings from Rust, used to ship Rust cores behind Kotlin, Swift, and Python APIs.
 - [corrosion](https://github.com/corrosion-rs/corrosion) - CMake integration for Cargo, for adding Rust targets to existing C and C++ builds.
 - [Rust/C++ Interop Initiative](https://github.com/rustfoundation/interop-initiative) - Rust Foundation initiative mapping and closing Rust/C++ interoperability gaps, the practical prerequisite for incremental C++ to Rust migration in large codebases.
+- [neon](https://github.com/neon-bindings/neon) - Safe Rust to Node.js bindings, the standard way to put a Rust core behind Electron desktop apps.
+- [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen) - Rust to WebAssembly bindings, used to ship shared Rust cores into web apps and browser extensions such as Proton Pass.
 
 ## Research
 
@@ -124,6 +128,7 @@ Practical write-ups on how teams actually run these migrations.
 - [Function Argument Nullability Using an LLM](https://www.galois.com/articles/function-argument-nullability-using-an-llm) - Galois article on augmenting C2Rust migration analysis with an LLM.
 - [Canonical Funded a PhD to Translate C to Rust. Ask Why.](https://www.beri.net/article/ai-c-to-rust-translation-residual-unsafe-code-canonical-phd) - Critical analysis of what AI C-to-Rust translation leaves behind, the residual-unsafe-code problem, and how Google's data argues for writing new safe code rather than translating the old corpus.
 - [Ghosts in the Silicon: Fixing Memory Safety and Surviving Hardware Decay](https://josephhall.org/blog/wallach-mem-safety-sw-independence/) - Discussion with computer scientist Dan Wallach covering DARPA TRACTOR, the correctness-safety-idiomaticity trilemma of automated translation, and why manual rewrites cannot scale to the legacy C corpus.
+- [Cross-platform Rust: how WhatsApp, Signal and more ship Rust to billions of devices](https://kerkour.com/rust-cross-platform-apps) - Analysis of the two production architectures for shared Rust cores (whole-core vs targeted libraries), UniFFI versus raw FFI bridging, and WhatsApp's C++ to Rust media library migration.
 
 ## Adjacent Lists
 
