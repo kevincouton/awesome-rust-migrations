@@ -41,6 +41,7 @@ Projects pushing the limits of AI-assisted rewrites into Rust, where behavior co
 - [Ladybird's Rust adoption](https://ladybird.org/posts/adopting-rust/) - Browser project adopting Rust with AI assistance, starting with LibJS because it is relatively isolated and has extensive test coverage.
 - [pacquet](https://github.com/pnpm/pacquet) - Official pnpm rewrite in Rust, porting the pnpm CLI from TypeScript to Rust while matching pnpm behavior, flags, defaults, error codes, file formats, and directory layout.
 - [pgrust](https://pgrust.com/) - PostgreSQL rewrite in Rust using AI-assisted engineering, with PostgreSQL behavior and compatibility tests as the bar.
+- [OpenAI Habitat Python-to-Rust rewrite](https://openai.com/index/scaling-storage-one-billion-users-part-one/) - OpenAI rewrote its Habitat storage service from Python to Rust in Q2 2026 with two engineers plus Codex and GPT-5.5; the Rust service now handles 95% of production requests (over 20M requests per second at the Python version's peak), with 6x CPU and 15x memory efficiency.
 - [tsz](https://github.com/tsz-org/tsz) - AI-assisted Rust implementation of a TypeScript checker targeting drop-in `tsc` compatibility, with conformance progress reported against the official TypeScript test suite.
 
 ## Automated Translation and C2Rust Case Studies
