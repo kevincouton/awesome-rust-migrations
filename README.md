@@ -122,6 +122,8 @@ Practical write-ups on how teams actually run these migrations.
 
 - [Memory-Unsafe Code Is a Liability](https://corrode.dev/blog/memory-safety/) - Corrode's 2026 essay on why memory safety is the lowest-hanging fruit in software security and where Rust fits in migration plans.
 - [C++ to Rust Migration](https://blog.jetbrains.com/rust/2026/07/27/cpp-to-rust-migration/) - Luca Palmieri's guide to incremental C++ to Rust migration for large, active, customer-deployed systems.
+- [A Year of Rust in ClickHouse](https://clickhouse.com/blog/rust) - Alexey Milovidov's account of integrating Rust into the 1.5M-line C++ ClickHouse codebase without a rewrite: the BLAKE3 beachhead, skim and PRQL experiments, and replacing the C++ Delta Lake reader with delta-kernel-rs — including hermetic builds, vendoring, MSan-instrumented Rust, and fuzzers catching panics in Rust libraries.
+- [How to use Rust in ClickHouse: avoiding a full rewrite](https://clickhouse.com/blog/alexey-p99-2025-rust-in-clickhouse) - Annotated P99 CONF 2025 talk on why a large C++ codebase should adopt Rust incrementally: pick a rip-out-able component first, and expect 672 transitive dependencies, FFI ownership bugs, and sanitizer friction along the way.
 - [Porting C to Rust for a Fast and Safe AV1 Media Decoder](https://www.memorysafety.org/blog/porting-c-to-rust-for-av1/) - Prossimo write-up on the goals and approach behind `rav1d`.
 - [Making the rav1d Video Decoder 1% Faster](https://ohadravid.github.io/posts/2025-05-rav1d-faster/) - Performance case study on a C2Rust-derived port.
 - [Translating bzip2 with C2Rust](https://trifectatech.org/blog/translating-bzip2-with-c2rust/) - Trifecta Tech Foundation write-up on translating bzip2 with C2Rust.
