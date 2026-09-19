@@ -2,6 +2,7 @@
 # but blog.jetbrains.com consistently returns 504 to GitHub Actions runners.
 # Re-check periodically and remove this exclusion if their CDN behavior changes.
 https://blog.jetbrains.com/rust/2026/07/27/cpp-to-rust-migration/
+https://blog.jetbrains.com/rust/2026/08/10/rewriting-in-rust/
 # openai.com blocks non-browser traffic (403) including CI runners; the article
 # was verified live and fully readable via browser-context fetching on 2026-09-14.
 https://openai.com/index/scaling-storage-one-billion-users-part-one/

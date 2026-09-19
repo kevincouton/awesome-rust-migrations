@@ -97,6 +97,7 @@ Translators, migration platforms, and the FFI/interop machinery that makes incre
 - [uniffi](https://github.com/mozilla/uniffi-rs) - Mozilla's toolkit for generating foreign-language bindings from Rust, used to ship Rust cores behind Kotlin, Swift, and Python APIs.
 - [corrosion](https://github.com/corrosion-rs/corrosion) - CMake integration for Cargo, for adding Rust targets to existing C and C++ builds.
 - [Rust/C++ Interop Initiative](https://github.com/rustfoundation/interop-initiative) - Rust Foundation initiative mapping and closing Rust/C++ interoperability gaps, the practical prerequisite for incremental C++ to Rust migration in large codebases.
+- [CO3: Toward the Optimal FFI](https://mversic.github.io/co3/) - Design exploration of a bidirectional Rust/C FFI model: pure-Rust declarations for imports and exports of functions, statics, methods, and opaque types, with ownership transfer across the boundary and static monomorphization or runtime tag dispatch where C has no generics.
 - [neon](https://github.com/neon-bindings/neon) - Safe Rust to Node.js bindings, the standard way to put a Rust core behind Electron desktop apps.
 - [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen) - Rust to WebAssembly bindings, used to ship shared Rust cores into web apps and browser extensions such as Proton Pass.
 
@@ -122,6 +123,7 @@ Practical write-ups on how teams actually run these migrations.
 
 - [Memory-Unsafe Code Is a Liability](https://corrode.dev/blog/memory-safety/) - Corrode's 2026 essay on why memory safety is the lowest-hanging fruit in software security and where Rust fits in migration plans.
 - [C++ to Rust Migration](https://blog.jetbrains.com/rust/2026/07/27/cpp-to-rust-migration/) - Luca Palmieri's guide to incremental C++ to Rust migration for large, active, customer-deployed systems.
+- [Rewriting in Rust: Performance, Failures, 2026 Reality Check](https://blog.jetbrains.com/rust/2026/08/10/rewriting-in-rust/) - JetBrains survey of Rewrite It In Rust attempts, separating the projects where rewrites delivered measurable performance and safety wins from those that stalled or were abandoned.
 - [A Year of Rust in ClickHouse](https://clickhouse.com/blog/rust) - Alexey Milovidov's account of integrating Rust into the 1.5M-line C++ ClickHouse codebase without a rewrite: the BLAKE3 beachhead, skim and PRQL experiments, and replacing the C++ Delta Lake reader with delta-kernel-rs — including hermetic builds, vendoring, MSan-instrumented Rust, and fuzzers catching panics in Rust libraries.
 - [How to use Rust in ClickHouse: avoiding a full rewrite](https://clickhouse.com/blog/alexey-p99-2025-rust-in-clickhouse) - Annotated P99 CONF 2025 talk on why a large C++ codebase should adopt Rust incrementally: pick a rip-out-able component first, and expect 672 transitive dependencies, FFI ownership bugs, and sanitizer friction along the way.
 - [Porting C to Rust for a Fast and Safe AV1 Media Decoder](https://www.memorysafety.org/blog/porting-c-to-rust-for-av1/) - Prossimo write-up on the goals and approach behind `rav1d`.
