@@ -10,6 +10,7 @@ Rewriting C, C++, and other legacy code in Rust is now a serious, funded, engine
 - [AI-Assisted Rewrites](#ai-assisted-rewrites)
 - [Automated Translation and C2Rust Case Studies](#automated-translation-and-c2rust-case-studies)
 - [Production Adoptions at Scale](#production-adoptions-at-scale)
+- [Language Toolchains Rewritten in Rust](#language-toolchains-rewritten-in-rust)
 - [Tools and Interop](#tools-and-interop)
 - [Research](#research)
 - [Guides, Articles, and Talks](#guides-articles-and-talks)
@@ -60,28 +61,46 @@ These are mostly not AI-assisted, but they are the prior art for automated trans
 
 ## Production Adoptions at Scale
 
-Not necessarily AI-assisted — these show large ecosystems replacing existing developer tooling and infrastructure with Rust implementations.
+Not necessarily AI-assisted — these show large production systems replacing services and infrastructure with Rust implementations.
 
 - [gRPC Rust](https://grpc.io/blog/grpc-welcomes-tonic/) - Tonic officially moved into the gRPC project under the CNCF, with Google building a new production-grade `grpc-rust` implementation alongside it.
+- [InfluxDB Rust monolith](https://www.influxdata.com/blog/rust-monolith-migration-influxdb/) - InfluxData rewrote core account and resource management APIs from Go microservices into a single Rust monolith, using the strangler pattern for a zero-downtime migration.
+- [Grab's Counter Service](https://engineering.grab.com/counter-service-how-we-rewrote-it-in-rust) - Grab deliberately rewrote a Go service in idiomatic Rust rather than translating it line by line, migrating traffic incrementally.
+- [rustls](https://github.com/rustls/rustls) - Memory-safe TLS library in Rust, Prossimo-funded and available as an officially supported TLS backend in curl, giving the incumbent C TLS ecosystem a production Rust alternative.
+- [Rustwright](https://github.com/Skyvern-AI/rustwright) - Alpha Rust reimplementation of Playwright's browser-control engine under Playwright-shaped Python and Node APIs; reports 515 shared parity cases and 1,046 Docker-gate tests, plus local diagnostic speed and client-memory gains, while explicitly saying full behavioral parity is not yet proven.
+- [Turso](https://github.com/tursodatabase/turso) - Rust rewrite of SQLite evolving into a pluggable database core; its new [PostgreSQL frontend](https://turso.tech/blog/a-new-modern-version-of-postgres-in-rust) compiles PostgreSQL syntax and types to Turso bytecode, targets common-application compatibility rather than 100% PostgreSQL parity, and documents simulation, oracle, fuzz, and formal-method testing.
+- [WhatsApp wamedia rewrite](https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/) - Meta's writeup of rewriting WhatsApp's media validation library from 160,000 lines of C++ to 90,000 lines of Rust, validated with differential fuzzing and a parallel rollout with rollback, with performance and memory improvements.
+- [libsignal](https://github.com/signalapp/libsignal) - Signal's Rust cryptography and protocol library, migrated from libsignal-protocol-c and shipped to billions of devices behind FFI bridges to Swift, Java, and TypeScript.
+
+## Language Toolchains Rewritten in Rust
+
+The loudest mass migration of all: other languages' compilers, package managers, linters, type checkers, and bundlers rebuilt in Rust, usually 10-100x faster than the tools they replace. AI-authored toolchain rewrites such as `pacquet` and `tsz` are listed under AI-Assisted Rewrites.
+
+### Python
+
+- [ty](https://github.com/astral-sh/ty) - Astral's Python type checker in Rust, a fast alternative to mypy and pyright that reached beta in December 2025.
+- [uv](https://github.com/astral-sh/uv) - Rust Python package and project manager designed as a fast replacement for tools such as `pip`, `pip-tools`, `pipx`, `poetry`, and `virtualenv`.
+- [Ruff](https://github.com/astral-sh/ruff) - Rust Python linter and formatter that replaces or consolidates tools such as Flake8, isort, and Black.
+- [Pyrefly](https://pyrefly.org) - Meta's Rust rewrite of its OCaml-based Pyre type checker, built on a custom incremental computation engine and validated on Instagram's codebase before its 1.0 release in 2026.
+- [pixi](https://github.com/prefix-dev/pixi) - Prefix.dev's Rust package manager for the conda ecosystem, built on the rattler crates — a full Rust reimplementation of conda metadata, SAT solving, downloading, and installing that has since moved into the conda organization itself.
+
+### JavaScript and TypeScript
+
 - [Astro 7](https://astro.build/blog/astro-7/) - Astro rewrote its `.astro` compiler in Rust, made its Rust-powered Markdown and MDX pipeline the default, and reports 15-61% faster builds across benchmark sites.
 - [Biome](https://biomejs.dev/) - Rust web toolchain for formatting, linting, and code analysis, positioned as a faster alternative to common JavaScript tooling.
 - [Deno 2.0](https://deno.com/blog/v2.0) - Rust-based JavaScript and TypeScript runtime with Node.js and npm compatibility, plus built-in formatter, linter, test runner, and task runner.
-- [InfluxDB Rust monolith](https://www.influxdata.com/blog/rust-monolith-migration-influxdb/) - InfluxData rewrote core account and resource management APIs from Go microservices into a single Rust monolith, using the strangler pattern for a zero-downtime migration.
-- [Grab's Counter Service](https://engineering.grab.com/counter-service-how-we-rewrote-it-in-rust) - Grab deliberately rewrote a Go service in idiomatic Rust rather than translating it line by line, migrating traffic incrementally.
 - [Lightning CSS](https://github.com/parcel-bundler/lightningcss) - Rust CSS parser, transformer, bundler, and minifier used by Parcel and other tools.
 - [Next.js Compiler](https://nextjs.org/docs/architecture/nextjs-compiler) - Rust/SWC-based compiler that replaces Babel for individual files and Terser for minification in Next.js.
-- [Oxc](https://oxc.rs/) - Rust JavaScript tooling stack covering parser, linter, formatter, transformer, resolver, and minifier.
+- [Oxc](https://oxc.rs/) - Rust JavaScript tooling stack covering parser, linter (`oxlint`), formatter, transformer, resolver, and minifier.
 - [Rolldown](https://rolldown.rs/) - Rust Rollup-compatible bundler used by Vite to replace its previous esbuild/Rollup split.
 - [Rspack](https://rspack.rs/blog/announcing-1-0) - Rust Webpack-compatible bundler designed for progressive migration from Webpack.
-- [Ruff](https://github.com/astral-sh/ruff) - Rust Python linter and formatter that replaces or consolidates tools such as Flake8, isort, and Black.
-- [rustls](https://github.com/rustls/rustls) - Memory-safe TLS library in Rust, Prossimo-funded and available as an officially supported TLS backend in curl, giving the incumbent C TLS ecosystem a production Rust alternative.
-- [Rustwright](https://github.com/Skyvern-AI/rustwright) - Alpha Rust reimplementation of Playwright's browser-control engine under Playwright-shaped Python and Node APIs; reports 515 shared parity cases and 1,046 Docker-gate tests, plus local diagnostic speed and client-memory gains, while explicitly saying full behavioral parity is not yet proven.
+- [SWC](https://swc.rs) - Rust platform for JavaScript and TypeScript compilation that replaces Babel; the base layer under the Next.js Compiler and many other tools.
 - [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) - New high-performance Tailwind engine using Rust-powered pieces and Lightning CSS, with substantially faster full and incremental builds.
 - [Turbopack](https://nextjs.org/blog/next-13) - Vercel's Rust-based successor to Webpack, introduced through Next.js.
-- [Turso](https://github.com/tursodatabase/turso) - Rust rewrite of SQLite evolving into a pluggable database core; its new [PostgreSQL frontend](https://turso.tech/blog/a-new-modern-version-of-postgres-in-rust) compiles PostgreSQL syntax and types to Turso bytecode, targets common-application compatibility rather than 100% PostgreSQL parity, and documents simulation, oracle, fuzz, and formal-method testing.
-- [uv](https://github.com/astral-sh/uv) - Rust Python package and project manager designed as a fast replacement for tools such as `pip`, `pip-tools`, `pipx`, `poetry`, and `virtualenv`.
-- [WhatsApp wamedia rewrite](https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/) - Meta's writeup of rewriting WhatsApp's media validation library from 160,000 lines of C++ to 90,000 lines of Rust, validated with differential fuzzing and a parallel rollout with rollback, with performance and memory improvements.
-- [libsignal](https://github.com/signalapp/libsignal) - Signal's Rust cryptography and protocol library, migrated from libsignal-protocol-c and shipped to billions of devices behind FFI bridges to Swift, Java, and TypeScript.
+
+### Ruby
+
+- [Porting the YJIT Ruby Compiler to Rust](https://shopify.engineering/porting-yjit-ruby-compiler-to-rust) - Shopify ported Ruby's YJIT JIT compiler from C to Rust, shipping as the default in Ruby 3.2; the write-up covers fighting the borrow checker over cyclic compiler data structures and why Rust still won on development velocity and safety.
 
 ## Tools and Interop
 
