@@ -63,6 +63,8 @@ These are mostly not AI-assisted, but they are the prior art for automated trans
 
 Not necessarily AI-assisted — these show large production systems replacing services and infrastructure with Rust implementations.
 
+- [Cloudflare FL2 front line](https://blog.cloudflare.com/20-percent-internet-upgrade/) - Cloudflare rebuilt the 15-year-old Front Line proxy in front of roughly 20% of the internet from NGINX/OpenResty and Lua (FL1) into Rust (FL2), using an adapter layer to run Rust modules inside the old system first and the Flamingo automated test framework to prove parity during the cutover.
+- [Discord Read States Go-to-Rust rewrite](https://discord.engineering/2020/02/07/why-discord-is-switching-from-go-to-rust/) - Discord's writeup of rewriting the Read States service from Go to Rust after garbage-collector spikes caused latency problems; the canonical account of what problems Rust actually solves and what it costs in ecosystem maturity.
 - [gRPC Rust](https://grpc.io/blog/grpc-welcomes-tonic/) - Tonic officially moved into the gRPC project under the CNCF, with Google building a new production-grade `grpc-rust` implementation alongside it.
 - [InfluxDB Rust monolith](https://www.influxdata.com/blog/rust-monolith-migration-influxdb/) - InfluxData rewrote core account and resource management APIs from Go microservices into a single Rust monolith, using the strangler pattern for a zero-downtime migration.
 - [Grab's Counter Service](https://engineering.grab.com/counter-service-how-we-rewrote-it-in-rust) - Grab deliberately rewrote a Go service in idiomatic Rust rather than translating it line by line, migrating traffic incrementally.
