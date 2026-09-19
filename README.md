@@ -182,6 +182,6 @@ This list is intentionally narrow. It is not a general Rust list, a general AI c
 
 Good entries should show at least one serious validation signal: test results, compatibility target, benchmark data, migration log, source and target code links, or discussion of unsafe code and semantic gaps.
 
-Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). To steer the list's direction, join the [standing direction discussion](https://github.com/kevincouton/awesome-rust-migrations/issues/2); to propose content without opening a PR, use the [suggest-an-entry thread](https://github.com/kevincouton/awesome-rust-migrations/issues/3).
 
 This list started as an expansion of malisper's Awesome AI Rust Rewrites (CC0), which is linked in Adjacent Lists above.
