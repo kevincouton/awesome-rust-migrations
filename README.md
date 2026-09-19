@@ -105,7 +105,7 @@ The loudest mass migration of all: other languages' compilers, package managers,
 ### Cross-Ecosystem
 
 - [mise](https://mise.jdx.dev) - Polyglot tool version manager and task runner in Rust (formerly rtx), a drop-in replacement for asdf, nvm, pyenv, rbenv, and direnv, with native backends steadily replacing asdf's shell-script plugins.
-- [proto](https://github.com/moonrepo/proto) - Moonrepo's Rust-based multi-language toolchain manager, using WASM plugins instead of shell scripts to version Node.js, Bun, Deno, Python, and other runtimes.
+- [proto](https://github.com/moonrepo/proto) - Moonrepo's Rust-based multi-language toolchain manager, using WebAssembly plugins instead of shell scripts to version Node.js, Bun, Deno, Python, and other runtimes.
 
 ## Tools and Interop
 
