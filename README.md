@@ -102,6 +102,11 @@ The loudest mass migration of all: other languages' compilers, package managers,
 
 - [Porting the YJIT Ruby Compiler to Rust](https://shopify.engineering/porting-yjit-ruby-compiler-to-rust) - Shopify ported Ruby's YJIT JIT compiler from C to Rust, shipping as the default in Ruby 3.2; the write-up covers fighting the borrow checker over cyclic compiler data structures and why Rust still won on development velocity and safety.
 
+### Cross-Ecosystem
+
+- [mise](https://mise.jdx.dev) - Polyglot tool version manager and task runner in Rust (formerly rtx), a drop-in replacement for asdf, nvm, pyenv, rbenv, and direnv, with native backends steadily replacing asdf's shell-script plugins.
+- [proto](https://github.com/moonrepo/proto) - Moonrepo's Rust-based multi-language toolchain manager, using WASM plugins instead of shell scripts to version Node.js, Bun, Deno, Python, and other runtimes.
+
 ## Tools and Interop
 
 Translators, migration platforms, and the FFI/interop machinery that makes incremental migration practical.
