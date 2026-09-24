@@ -6,3 +6,7 @@ https://blog.jetbrains.com/rust/2026/08/10/rewriting-in-rust/
 # openai.com blocks non-browser traffic (403) including CI runners; the article
 # was verified live and fully readable via browser-context fetching on 2026-09-14.
 https://openai.com/index/scaling-storage-one-billion-users-part-one/
+# rustfoundation.org returns 403 to curl/lychee bot traffic; the page is live
+# (indexed, translated, discussed on HN on 2026-09-11). Verified via search
+# snippets and third-party coverage on 2026-09-24.
+https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/
