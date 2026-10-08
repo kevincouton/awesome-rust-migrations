@@ -55,7 +55,7 @@ These are mostly not AI-assisted, but they are the prior art for automated trans
 - [libyaml-safer](https://github.com/simonask/libyaml-safer) - Fully safe Rust fork of `unsafe-libyaml`, originally translated from libyaml with C2Rust.
 - [rav1d](https://github.com/memorysafety/rav1d) - Fully safe Rust port of the `dav1d` AV1 decoder, created with C2Rust and then refactored toward safer, more idiomatic Rust.
 - [rexpat](https://github.com/immunant/rexpat) - Rust port of Expat used as a C2Rust case study.
-- [sapp-kms](https://docs.rs/sapp-kms/latest/sapp_kms) - C2Rust-derived port of sokol's KMS backend, cleaned up but still unsafe.
+- [sapp-kms](https://docs.rs/sapp-kms/latest/sapp_kms/) - C2Rust-derived port of sokol's KMS backend, cleaned up but still unsafe.
 - [spiro.rlib](https://github.com/MFEK/spiro.rlib) - Fully safe C2Rust-derived port of the `spiro` spline interpolation library.
 - [tsuki](https://github.com/ultimaweapon/tsuki) - Fully safe C2Rust-derived port of the Lua interpreter.
 - [unsafe-libyaml](https://github.com/dtolnay/unsafe-libyaml) - Mostly direct C2Rust-derived port of libyaml, kept fully unsafe with minor cleanup.
@@ -66,7 +66,7 @@ These are mostly not AI-assisted, but they are the prior art for automated trans
 Not necessarily AI-assisted — these show large production systems replacing services and infrastructure with Rust implementations.
 
 - [Cloudflare FL2 front line](https://blog.cloudflare.com/20-percent-internet-upgrade/) - Cloudflare rebuilt the 15-year-old Front Line proxy in front of roughly 20% of the internet from NGINX/OpenResty and Lua (FL1) into Rust (FL2), using an adapter layer to run Rust modules inside the old system first and the Flamingo automated test framework to prove parity during the cutover.
-- [Discord Read States Go-to-Rust rewrite](https://discord.engineering/2020/02/07/why-discord-is-switching-from-go-to-rust/) - Discord's writeup of rewriting the Read States service from Go to Rust after garbage-collector spikes caused latency problems; the canonical account of what problems Rust actually solves and what it costs in ecosystem maturity.
+- [Discord Read States Go-to-Rust rewrite](https://discord.com/blog/why-discord-is-switching-from-go-to-rust) - Discord's writeup of rewriting the Read States service from Go to Rust after garbage-collector spikes caused latency problems; the canonical account of what problems Rust actually solves and what it costs in ecosystem maturity.
 - [Three years migrating latency-sensitive services to Rust](https://www.reddit.com/r/rust/comments/1wuask9/three_years_migrating_latencysensitive_services/) - Stephen Blum's writeup of a three-year migration of latency-sensitive services from Python, Go, JVM, and C, measured against fifteen dashboard panels that predated the migration: replacing an nginx balancer with Pingora took average balancer time from 600ms to 101ms on identical hardware and traffic, hottest-path publish latency fell from ~350µs to ~50µs, and a candid post-mortem covers a Tokio failure where unbounded task-per-request spawns grew a 100 MiB pod to 3.7 GiB until backpressure at the ingest edge fixed it.
 - [gRPC Rust](https://grpc.io/blog/grpc-welcomes-tonic/) - Tonic officially moved into the gRPC project under the CNCF, with Google building a new production-grade `grpc-rust` implementation alongside it.
 - [InfluxDB Rust monolith](https://www.influxdata.com/blog/rust-monolith-migration-influxdb/) - InfluxData rewrote core account and resource management APIs from Go microservices into a single Rust monolith, using the strangler pattern for a zero-downtime migration.
@@ -128,7 +128,7 @@ Translators, migration platforms, and the FFI/interop machinery that makes incre
 - [Rust/C++ Interop Initiative](https://github.com/rustfoundation/interop-initiative) - Rust Foundation initiative mapping and closing Rust/C++ interoperability gaps, the practical prerequisite for incremental C++ to Rust migration in large codebases.
 - [CO3: Toward the Optimal FFI](https://mversic.github.io/co3/) - Design exploration of a bidirectional Rust/C FFI model: pure-Rust declarations for imports and exports of functions, statics, methods, and opaque types, with ownership transfer across the boundary and static monomorphization or runtime tag dispatch where C has no generics.
 - [neon](https://github.com/neon-bindings/neon) - Safe Rust to Node.js bindings, the standard way to put a Rust core behind Electron desktop apps.
-- [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen) - Rust to WebAssembly bindings, used to ship shared Rust cores into web apps and browser extensions such as Proton Pass.
+- [wasm-bindgen](https://github.com/wasm-bindgen/wasm-bindgen) - Rust to WebAssembly bindings, used to ship shared Rust cores into web apps and browser extensions such as Proton Pass.
 
 ## Research
 
