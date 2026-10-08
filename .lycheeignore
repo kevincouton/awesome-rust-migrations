@@ -10,3 +10,8 @@ https://openai.com/index/scaling-storage-one-billion-users-part-one/
 # (indexed, translated, discussed on HN on 2026-09-11). Verified via search
 # snippets and third-party coverage on 2026-09-24.
 https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/
+# reddit.com blocks all non-browser traffic (403); the self-post is the primary
+# source of the writeup (author-shared on LinkedIn 2026-10-03, quoted in full by
+# rust-trends.com #84). Balancer numbers (600ms -> 101ms) confirmed from the
+# post's own indexed text.
+https://www.reddit.com/r/rust/comments/1wuask9/three_years_migrating_latencysensitive_services/
