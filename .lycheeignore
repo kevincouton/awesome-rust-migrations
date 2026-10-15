@@ -15,3 +15,8 @@ https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft
 # rust-trends.com #84). Balancer numbers (600ms -> 101ms) confirmed from the
 # post's own indexed text.
 https://www.reddit.com/r/rust/comments/1wuask9/three_years_migrating_latencysensitive_services/
+# kerkour.com is otherwise healthy (other articles 200) but this article started
+# returning 404 on 2026-10-15; still fully indexed by Google with recent crawls,
+# so likely a site restructure. Recheck every pass: restore the direct URL if it
+# comes back, otherwise swap to a web.archive.org snapshot.
+https://kerkour.com/rust-cross-platform-apps
