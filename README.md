@@ -167,6 +167,7 @@ Practical write-ups on how teams actually run these migrations.
 - [Ghosts in the Silicon: Fixing Memory Safety and Surviving Hardware Decay](https://josephhall.org/blog/wallach-mem-safety-sw-independence/) - Discussion with computer scientist Dan Wallach covering DARPA TRACTOR, the correctness-safety-idiomaticity trilemma of automated translation, and why manual rewrites cannot scale to the legacy C corpus.
 - [How Turborepo is porting from Go to Rust](https://vercel.com/blog/how-turborepo-is-porting-from-go-to-rust) - Vercel's account of incrementally porting Turborepo from Go to Rust instead of a full rewrite: the Rust shim wrapping Go compiled as a C static library, JSON-over-FFI to shrink the interop surface, and the musl static-linking pitfalls that forced a two-binary design.
 - [Cross-platform Rust: how WhatsApp, Signal and more ship Rust to billions of devices](https://kerkour.com/rust-cross-platform-apps) - Analysis of the two production architectures for shared Rust cores (whole-core vs targeted libraries), UniFFI versus raw FFI bridging, and WhatsApp's C++ to Rust media library migration.
+- [How Signal and WhatsApp deploy Rust to billions of Android and iOS devices](https://kerkour.com/rust-ios-android-signal-whatsapp) - Follow-up with code-level walkthroughs of both bridging strategies (Signal's raw FFI bridge layers versus Proton's UniFFI), neon and Tauri for desktop, WebAssembly for browser extensions, and WhatsApp's differential-fuzzing, parallel-rollout migration playbook.
 
 ## Choosing Crates
 
