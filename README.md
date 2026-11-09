@@ -32,6 +32,7 @@ The data and policy behind the migration movement. Memory safety bugs are the ma
 - [Prossimo: Memory Safety](https://www.memorysafety.org/) - Internet Security Research Group initiative funding memory-safe rewrites and foundations, including `rav1d`, `rustls`, `zlib-rs`, and Rust support in the Linux kernel.
 - [Rust Is Tier-1 Language at Microsoft](https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/) - Rust Foundation guest post by Microsoft's Rust tooling lead: Rust now sits alongside C++, C#, and TypeScript as a Tier-1 internal language at Microsoft, backed by `rustc_codegen_utc`, an MSVC-native code-generation backend already building 100+ internal projects and enabling deep Rust/C++ interop.
 - [Introducing CUDA Rust: Two Tracks for Writing GPU Kernels](https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/) - NVIDIA's September 2026 announcement of native Rust GPU kernels compiled to PTX (cuda-oxide for SIMT, cutile-rs for tiles), where aliasing and out-of-bounds errors fail at compile time; the Nova Linux driver is already written in Rust.
+- [systemd ❤️ Rust](https://amutable.com/blog/systemd-loves-rust) - Maintainers Christian Brauner and Lennart Poettering announce merged support for Rust in systemd: leaf binaries first (no-std Rust, fallible allocations, uniform meson build) while the shared library stays C, explicitly aiming at Rust in core components once first-class shared-library support lands.
 - [DARPA TRACTOR](https://www.darpa.mil/research/programs/translating-all-c-to-rust) - DARPA program to automate translation of legacy C code to Rust using software analysis and machine learning.
 - [TRACTOR Benchmarks](https://www.ll.mit.edu/r-d/projects/translating-all-c-rust-tractor-benchmarks) - MIT Lincoln Laboratory benchmarks and evaluation work for DARPA's C-to-Rust translation program.
 
@@ -104,6 +105,7 @@ The loudest mass migration of all: other languages' compilers, package managers,
 - [SWC](https://swc.rs) - Rust platform for JavaScript and TypeScript compilation that replaces Babel; the base layer under the Next.js Compiler and many other tools.
 - [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) - New high-performance Tailwind engine using Rust-powered pieces and Lightning CSS, with substantially faster full and incremental builds.
 - [Turbopack](https://nextjs.org/blog/next-13) - Vercel's Rust-based successor to Webpack, introduced through Next.js.
+- [tsrs](https://blog.cloudflare.com/typescript-rust-port/) - Cloudflare, VoidZero, and Owner.com's agent-written Rust port of the TypeScript 7 compiler, incubated in Oxc: up to 8x faster type-checking than TypeScript 7.0 with about 70% less memory at equal checker workers, tracking the Go implementation as the spec, with optimizations already upstreamed into the TypeScript 7.1 beta.
 
 ### Ruby
 
@@ -168,6 +170,7 @@ Practical write-ups on how teams actually run these migrations.
 - [How Turborepo is porting from Go to Rust](https://vercel.com/blog/how-turborepo-is-porting-from-go-to-rust) - Vercel's account of incrementally porting Turborepo from Go to Rust instead of a full rewrite: the Rust shim wrapping Go compiled as a C static library, JSON-over-FFI to shrink the interop surface, and the musl static-linking pitfalls that forced a two-binary design.
 - [Cross-platform Rust: how WhatsApp, Signal and more ship Rust to billions of devices](https://kerkour.com/rust-cross-platform-apps) - Analysis of the two production architectures for shared Rust cores (whole-core vs targeted libraries), UniFFI versus raw FFI bridging, and WhatsApp's C++ to Rust media library migration.
 - [How Signal and WhatsApp deploy Rust to billions of Android and iOS devices](https://kerkour.com/rust-ios-android-signal-whatsapp) - Follow-up with code-level walkthroughs of both bridging strategies (Signal's raw FFI bridge layers versus Proton's UniFFI), neon and Tauri for desktop, WebAssembly for browser extensions, and WhatsApp's differential-fuzzing, parallel-rollout migration playbook.
+- [Cloudflare is rewriting everything in Rust](https://kerkour.com/rust-at-cloudflare) - Reconstruction of Cloudflare's decade-long proxy-stack migration from C and NGINX modules through Pingora to FL2, mapping which services are already Rust, which are in flight, and what remains C.
 
 ## Choosing Crates
 
