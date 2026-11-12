@@ -20,3 +20,8 @@ https://www.reddit.com/r/rust/comments/1wuask9/three_years_migrating_latencysens
 # so likely a site restructure. Recheck every pass: restore the direct URL if it
 # comes back, otherwise swap to a web.archive.org snapshot.
 https://kerkour.com/rust-cross-platform-apps
+# cacm.acm.org sits behind Cloudflare bot management and returns 403 to all
+# non-browser traffic (curl with browser UA also 403, verified 2026-11-12).
+# The article is fully readable in browsers and was verified by fetching the
+# complete text on 2026-11-12.
+https://cacm.acm.org/research/automatically-translating-c-to-rust/

@@ -145,6 +145,7 @@ Academic work on C-to-Rust translation, from LLM-assisted pipelines to program-a
 - [Rustine](https://arxiv.org/abs/2511.20617) - Repository-level C-to-Rust translation system targeting compilable, idiomatic, safer Rust with test-verified functional equivalence.
 - [&inator](https://arxiv.org/abs/2604.17261) - Correct and precise C-to-Rust interface translation.
 - [SafeTrans](https://arxiv.org/abs/2505.10708) - LLM-assisted C-to-Rust transpilation with iterative repair.
+- [Automatically Translating C to Rust (CACM, November 2026 cover story)](https://cacm.acm.org/research/automatically-translating-c-to-rust/) - KAIST survey of the refinement-pass approach to C2Rust output: static analyses that replace scalar pointers, locks, tagged unions, and output parameters with safe idiomatic Rust, the remaining unsafe-feature checklist, and a measured look at LLM split-translate-check-fix workflows.
 - [SACTOR](https://arxiv.org/abs/2503.12511) - LLM-driven multi-step C-to-Rust translation using static analysis.
 - [RustMap](https://arxiv.org/abs/2503.17741) - Project-scale C-to-Rust migration using program analysis, LLMs, dependency guidance, and test feedback.
 - [LLM4C2Rust](https://arxiv.org/abs/2604.15485) - Retrieval-augmented C/C++ to Rust transpilation framework focused on memory safety.
