@@ -40,6 +40,7 @@ The data and policy behind the migration movement. Memory safety bugs are the ma
 
 Projects pushing the limits of AI-assisted rewrites into Rust, where behavior compatibility and test suites are the bar.
 
+- [bcachefs](https://bcachefs.org/) - AI-assisted C-to-Rust port of the Linux copy-on-write filesystem's kernel code. Rust accounts for over 99% of the Rust and C code lines in a November 2026 `fs/` snapshot, including C headers. The [porting write-up](https://poc.bcachefs.org/blog/what-unlikely-said.html) describes ProofOfConcept's role and a performance issue the passing tests missed.
 - [Bun Zig-to-Rust rewrite](https://github.com/oven-sh/bun/pull/30412) - Bun merged "Rewrite Bun in Rust" on May 14, 2026 from the `claude/phase-a-port` branch, adding a Rust workspace across thousands of files; Bun canary builds are released from every `main` commit via `bun upgrade --canary`.
 - [Grit](https://github.com/gitbutlerapp/grit) - GitButler's AI-authored Git reimplementation in Rust, targeting close behavior compatibility with upstream Git by porting and running the Git test suite against `grit-git`.
 - [Ladybird's Rust adoption](https://ladybird.org/posts/adopting-rust/) - Browser project adopting Rust with AI assistance, starting with LibJS because it is relatively isolated and has extensive test coverage.
