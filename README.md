@@ -129,6 +129,7 @@ Translators, migration platforms, and the FFI/interop machinery that makes incre
 - [Corrode](https://github.com/jameysharp/corrode) - Older C-to-Rust translator, useful historical context for deterministic translation.
 - [Crustify](https://arxiv.org/abs/2611.10394) - Repository-level generation of safe Rust bindings for C, ordered by dependencies and checked with coverage-guided equivalence and undefined-behavior tests, sanitizers, and Miri; one developer covered 41.9% of libgit2's and 42.8% of FFmpeg's public APIs.
 - [ShiftCodex](https://shiftcodex.com/) - AI code migration platform built around translate, test, fix, and re-run loops.
+- [behave](https://github.com/emirmrkaljevic/behave) - Records a CLI tool's stdout, stderr and exit codes into replayable cases, then runs them against a rewrite to show where it behaves differently from the original binary.
 - [autocxx](https://github.com/google/autocxx) - Google's tool for calling C++ from Rust with a safe, generated binding layer, designed for incrementally introducing Rust into large C++ codebases such as Chromium.
 - [crubit](https://github.com/google/crubit) - Google's bidirectional C++ and Rust interoperability tooling.
 - [cxx](https://github.com/dtolnay/cxx) - Safe interop between Rust and C++ with a shared bridge definition and static analysis of the boundary.
