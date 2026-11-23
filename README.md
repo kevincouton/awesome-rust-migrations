@@ -44,6 +44,7 @@ Projects pushing the limits of AI-assisted rewrites into Rust, where behavior co
 - [Bun Zig-to-Rust rewrite](https://github.com/oven-sh/bun/pull/30412) - Bun merged "Rewrite Bun in Rust" on May 14, 2026 from the `claude/phase-a-port` branch, adding a Rust workspace across thousands of files; Bun canary builds are released from every `main` commit via `bun upgrade --canary`.
 - [Grit](https://github.com/gitbutlerapp/grit) - GitButler's AI-authored Git reimplementation in Rust, targeting close behavior compatibility with upstream Git by porting and running the Git test suite against `grit-git`.
 - [Ladybird's Rust adoption](https://ladybird.org/posts/adopting-rust/) - Browser project adopting Rust with AI assistance, starting with LibJS because it is relatively isolated and has extensive test coverage.
+- [Microsoft — Cheap code, precious trust](https://commandline.microsoft.com/agentic-software-engineering-large-scale-code-migration-language-modernization-spec-driven-development/) - Microsoft's October 2026 account of agent-driven C/C++-to-Rust modernization: feature-by-feature migration, differential and held-out tests, and formal specifications checked with Verus.
 - [pacquet](https://github.com/pnpm/pacquet) - Official pnpm rewrite in Rust, porting the pnpm CLI from TypeScript to Rust while matching pnpm behavior, flags, defaults, error codes, file formats, and directory layout.
 - [pgrust](https://pgrust.com/) - PostgreSQL rewrite in Rust using AI-assisted engineering, with PostgreSQL behavior and compatibility tests as the bar.
 - [OpenAI Habitat Python-to-Rust rewrite](https://openai.com/index/scaling-storage-one-billion-users-part-one/) - OpenAI rewrote its Habitat storage service from Python to Rust in Q2 2026 with two engineers plus Codex and GPT-5.5; the Rust service now handles 95% of production requests (over 20M requests per second at the Python version's peak), with 6x CPU and 15x memory efficiency.
@@ -126,6 +127,7 @@ Translators, migration platforms, and the FFI/interop machinery that makes incre
 
 - [C2Rust](https://github.com/immunant/c2rust) - C-to-Rust translator and refactoring toolkit for migrating C code to Rust.
 - [Corrode](https://github.com/jameysharp/corrode) - Older C-to-Rust translator, useful historical context for deterministic translation.
+- [Crustify](https://arxiv.org/abs/2611.10394) - Repository-level generation of safe Rust bindings for C, ordered by dependencies and checked with coverage-guided equivalence and undefined-behavior tests, sanitizers, and Miri; one developer covered 41.9% of libgit2's and 42.8% of FFmpeg's public APIs.
 - [ShiftCodex](https://shiftcodex.com/) - AI code migration platform built around translate, test, fix, and re-run loops.
 - [autocxx](https://github.com/google/autocxx) - Google's tool for calling C++ from Rust with a safe, generated binding layer, designed for incrementally introducing Rust into large C++ codebases such as Chromium.
 - [crubit](https://github.com/google/crubit) - Google's bidirectional C++ and Rust interoperability tooling.
@@ -150,6 +152,7 @@ Academic work on C-to-Rust translation, from LLM-assisted pipelines to program-a
 - [Automatically Translating C to Rust (CACM, November 2026 cover story)](https://cacm.acm.org/research/automatically-translating-c-to-rust/) - KAIST survey of the refinement-pass approach to C2Rust output: static analyses that replace scalar pointers, locks, tagged unions, and output parameters with safe idiomatic Rust, the remaining unsafe-feature checklist, and a measured look at LLM split-translate-check-fix workflows.
 - [SACTOR](https://arxiv.org/abs/2503.12511) - LLM-driven multi-step C-to-Rust translation using static analysis.
 - [RustMap](https://arxiv.org/abs/2503.17741) - Project-scale C-to-Rust migration using program analysis, LLMs, dependency guidance, and test feedback.
+- [Re-Testing LLM-Based C-to-Rust Translations Against Their Original C](https://arxiv.org/abs/2611.23839) - Independent November 2026 evaluation of 34 translators, re-testing all 11 with runnable source and output: 160 defects, including 93 errors on ordinary inputs, while project-supplied checks accepted 86 defective translations.
 - [LLM4C2Rust](https://arxiv.org/abs/2604.15485) - Retrieval-augmented C/C++ to Rust transpilation framework focused on memory safety.
 - [Scylla](https://arxiv.org/abs/2412.15042) - Formalized translation of an applicative subset of C to safe Rust, targeting memory safety by construction rather than after-the-fact cleanup.
 - [CNnotator](https://arxiv.org/abs/2606.21822) - LLM-guided synthesis of CN memory-safety annotations for C code, cutting the manual annotation effort needed to verify legacy C during migration.
